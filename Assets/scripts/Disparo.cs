@@ -8,12 +8,22 @@ public class Disparo : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Invoke("destroi", timer);   
+        Invoke("SalvaPC", timer);   
     }
 
     // Update is called once per frame
-    void destroi()
+    void SalvaPC()
     {
+        Destroy(gameObject);
+    }
+
+    private void OnCollisionEnter(Collision atingiu)
+    {
+        if (atingiu.gameObject.tag == "Boss" || atingiu.gameObject.tag == "Enemy")
+        {
+            atingiu.gameObject.GetComponent<Enemy>().Life(1);
+            Destroy(gameObject);
+        }
         Destroy(gameObject);
     }
 }
