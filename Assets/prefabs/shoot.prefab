@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5737364411590875624}
   - component: {fileID: 2755648155382849658}
   - component: {fileID: 365754696543283814}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: shoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -130,7 +130,7 @@ Rigidbody:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 4
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 0

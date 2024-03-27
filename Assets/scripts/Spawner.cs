@@ -39,18 +39,18 @@ public class Spawner : MonoBehaviour
         if (podeSpawn)
         {
             objRandom = Random.Range(0, rangeList);
-            numSpawn = Random.Range(1, numSpawnMax);
+            numSpawn = Random.Range(1, numSpawnMax);// não to usando ainda
             po = Random.Range(0, posicao.Count);
             posiRandom = posicao[po];
             posicaoSpawn = new Vector3(posiRandom, transform.position.y, transform.position.z);
             transform.position = posicaoSpawn;
-            SpawnOBJ(spawns[objRandom], numSpawn);
+            SpawnOBJ(spawns[objRandom]);
             podeSpawn = false;
             StartCoroutine(TimerSpawn());
         }
     }
 
-    void SpawnOBJ(GameObject prefab, int quantos)
+    void SpawnOBJ(GameObject prefab)
     {
         if (prefab.name == "Bonus_Onus")
         {
@@ -58,10 +58,10 @@ public class Spawner : MonoBehaviour
         }
         else
         {
-            for (int i = 0; i < quantos; i++)
+            /*for (int i = 0; i < quantos; i++)
             {
+            }*/
                 GameObject nova_bola = Instantiate(prefab, transform.position, transform.rotation);
-            }
         }
     }
 
@@ -70,4 +70,6 @@ public class Spawner : MonoBehaviour
         yield return new WaitForSeconds(timerSpawner);
         podeSpawn = true;
     }
+
+    
 }

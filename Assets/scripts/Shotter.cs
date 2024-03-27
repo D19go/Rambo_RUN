@@ -27,8 +27,10 @@ public class Shotter : MonoBehaviour
         yield return new WaitForSeconds(time);
         StartCoroutine(Tiro());
     }
-    public void LVL(float nvl)
+    public void LVL(float nvl, float newForce)
     {
-
+        time = nvl;
+        force = newForce;
+        Debug.Log("acionou");
     }
 }

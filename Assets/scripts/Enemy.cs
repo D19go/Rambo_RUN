@@ -43,8 +43,8 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    public void WavesMult()
+    public void WavesMult(int newVida)
     {
-
+        Vida = newVida;
     }
 }
