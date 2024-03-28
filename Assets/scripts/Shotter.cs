@@ -31,6 +31,5 @@ public class Shotter : MonoBehaviour
     {
         time = nvl;
         force = newForce;
-        Debug.Log("acionou");
     }
 }
